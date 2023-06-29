@@ -1,3 +1,5 @@
+import { Button } from "./Button"
+
 function Work() {
   return (
       <div className="flex flex-col justify-center items-center bg-forge-bg gap-8 p-8">
@@ -16,6 +18,7 @@ function Work() {
                   <p>Gain valuable technical skills, product development knowledge, and entrepreneurial experience</p>
               </div>
           </div>
+          <Button>Learn More</Button>
     </div>
   )
 }
