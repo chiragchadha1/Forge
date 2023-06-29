@@ -6,7 +6,7 @@ function Hero() {
           <h3 className="stroke !text-5xl">forge your own</h3>
         </div>
         <div className="flex flex-col justify-center items center gap-6 slide">
-          <h3 className="text-forge-orange !text-5xl slide-up">journey</h3>
+          <h3 className="text-forge-orange !text-5xl slide-up">wumbo</h3>
           <h3 className="text-forge-orange !text-5xl slide-up">path</h3>
           <h3 className="text-forge-orange !text-5xl slide-up">experience</h3>
         </div>
