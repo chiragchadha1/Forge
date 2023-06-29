@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&family=PT+Serif:wght@400;700&display=swap');
+
 /*
 ! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
 */
@@ -422,7 +424,7 @@ video {
   display: none;
 }
 
-*, ::before, ::after {
+*, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -472,7 +474,7 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-::backdrop {
+::backdrop{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -522,50 +524,74 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.flex {
+.flex{
   display: flex;
 }
 
-.h-\[100px\] {
-  height: 100px;
+.h-\[55px\]{
+  height: 55px;
 }
 
-.flex-row {
+.min-h-\[600px\]{
+  min-height: 600px;
+}
+
+.flex-row{
   flex-direction: row;
 }
 
-.items-center {
+.flex-col{
+  flex-direction: column;
+}
+
+.items-start{
+  align-items: flex-start;
+}
+
+.items-center{
   align-items: center;
 }
 
-.justify-center {
+.justify-center{
   justify-content: center;
 }
 
-.justify-around {
+.justify-around{
   justify-content: space-around;
 }
 
-.gap-8 {
-  gap: 2rem;
-}
-
-.gap-4 {
+.gap-4{
   gap: 1rem;
 }
 
-.bg-forge-bg {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 249 244 / var(--tw-bg-opacity));
+.gap-6{
+  gap: 1.5rem;
 }
 
-.p-4 {
+.gap-8{
+  gap: 2rem;
+}
+
+.bg-forge-bg{
+  background-color: var(--bg);
+}
+
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.p-4{
   padding: 1rem;
 }
 
-.text-forge-ornage {
-  --tw-text-opacity: 1;
-  color: rgb(253 141 58 / var(--tw-text-opacity));
+.\!text-5xl{
+  font-size: 3rem !important;
+  line-height: 1 !important;
+}
+
+.text-forge-orange{
+  color: var(--primary);
 }
 
 :root {
@@ -574,5 +600,115 @@ video {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  --primary: #FD8D3A;
+  --contrast: #D86711;
+  --accent: #AC5D86;
+  --text: #461F33;
+  --bg: #FAF9F4;
 }
 
+body {
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+h1, .h1 {
+  font-family: 'Jost', sans-serif;
+  color: var(--primary);
+  font-size: 1.875rem;
+  /* 30px */
+  font-weight: 800;
+  font-size: clamp(20px, 3.7vw, 30px);
+}
+
+h2, .h2 {
+  font-family: 'Jost', sans-serif;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-size: clamp(16px, 3vw, 20px);
+}
+
+h3, .h3 {
+  font-family: 'Jost', sans-serif;
+  color: black;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.25;
+  /* 30px */
+  font-size: clamp(36px, 1.8vw, 48px);
+}
+
+.stroke {
+  color: white;
+  background-color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.slide {
+  position: relative;
+  /* added this to position your pseudo-elements correctly */
+  overflow: hidden;
+  height: 14em;
+  /* to restrict the visible area */
+}
+
+.slide:before, .slide:after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  width: 100%;
+  background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+.slide:before {
+  height: 30%;
+  top: 0;
+}
+
+.slide:after {
+  height: 40%;
+  bottom: 0;
+  background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+}
+
+.slide-up {
+  position: relative;
+  z-index: 1;
+  animation: slide-up-animation 15s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+/* @keyframes slide-up-animation {
+  0%, 20% { transform: translateY(0); }
+  30%, 40% { transform: translateY(-100%); }
+  50%, 60% { transform: translateY(-200%); }
+  70%, 80% { transform: translateY(-100%); }
+  90%, 100% { transform: translateY(0); }
+} */
+
+@keyframes slide-up-animation {
+  0%, 10% {
+    transform: translateY(45px);
+  }
+
+  20%, 35% {
+    transform: translateY(-30px);
+  }
+
+  45%, 60% {
+    transform: translateY(-100px);
+  }
+
+  70%, 85% {
+    transform: translateY(-30px);
+  }
+
+  95%, 100% {
+    transform: translateY(45px);
+  }
+}
