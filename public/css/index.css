@@ -524,6 +524,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.mt-\[3\.75rem\]{
+  margin-top: 3.75rem;
+}
+
 .flex{
   display: flex;
 }
