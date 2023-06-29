@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm-run-all -p dev:*",
     "dev:vite": "vite",
-    "dev:css": "npx tailwindcss -i ./src/css/index.css -o ./public/css/index.css --watch",
+    "dev:css": "npx tailwindcss -i ./src/assets/css/index.css -o ./public/assets/css/index.css --watch",
     "build": "npm-run-all build:*",
     "build:tsc": "tsc",
     "build:vite": "vite build",
